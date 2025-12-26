@@ -1,49 +1,44 @@
-package BankingApp;
+package BANK;
+
+public class SavingAccount {
+    private String accountNumber;
+    private int balance;
+    private String userName;
 
 
-public class SavingAccount{
-   private int accountNumber;
-   private double balance;
-  private  String  ownerName;
-
-  //private int deposit;
-
-    int getAccountNumber(){
+    public String getAccountNumber() {
         return accountNumber;
     }
-    double getBalance(){
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public int getBalance() {
         return balance;
     }
-    String getOwnerName(){
-        return ownerName;
-    }
-   double getdeposit(){
-        return balance;
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 
-
-    void setAccountNumber(int accountNumber){
-        this.accountNumber=accountNumber;
-    }
-    void setBalance(double balance){
-        this.balance=balance;
-    }
-    void setOwnerName(String ownerName){
-        this.ownerName=ownerName;
+    public String getUserName() {
+        return userName;
     }
 
-    int setdeposit(double amount){
-
-      this.balance=amount+1;
-        return 0;
-    }
-    void  withdraw(double amount){
-
-        balance= amount-1;
-    }
-    void createFixedDeposit(){
-        System.out.println("Fixed Deposit Created"
-        );
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
+    public void deposit(int amount){
+        this.balance=this.balance+amount;
+        System.out.println(this.balance);
+    }
+    public void withdraw(int amount){
+        this.balance=this.balance-amount;
+        System.out.println(this.balance);
+    }
+    public void enableOverdraft(){
+        System.out.println("Fixed Deposit Created");
+    }
 }

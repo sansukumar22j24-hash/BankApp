@@ -1,55 +1,61 @@
-package BankingApp;
-public class User {
-    int depositAmount;
-    int withdrawAmount;
-    String accountType;
-    int accountNumber;
-    String name;
-    double balance;
+package BANK;
 
-    int getDepositAmount(){
+public class User {
+    private int  depositAmount;
+    private   int withdrawAmount;
+    private String accountType;
+    private String accountNumber;
+    private String name;
+    private int balance;
+
+
+    public int getDepositAmount() {
         return depositAmount;
     }
-    int getWithDrawAmount(){
+
+    public void setDepositAmount(int depositAmount) {
+        this.depositAmount = depositAmount;
+    }
+
+    public int getWithdrawAmount() {
         return withdrawAmount;
     }
-    String getAccountType(){
+
+    public void setWithdrawAmount(int withdrawAmount) {
+        this.withdrawAmount = withdrawAmount;
+    }
+
+    public String getAccountType() {
         return accountType;
     }
-    int getAccountNumber(){
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public String getAccountNumber() {
         return accountNumber;
     }
-    String getName(){
-        return name;
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
-    double getBalance(){
+
+
+
+    public int getBalance() {
         return balance;
     }
-    void setDepositAmount(int depositAmount){
-        this.depositAmount=depositAmount;
-    }
-    void setWithDrawAmount(int withdrawAmount){
-        this.withdrawAmount=withdrawAmount;
-    }
-    void setAccountNumber(int accountNumber){
-        this.accountNumber=accountNumber;
-    }
-    void setAccountType(String accountType){
-        this.accountType=accountType;
-    }
-    void setName(String name){
-        this.name= name;
-    }
-    void setBalance(double balance){
-        this.balance=balance;
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 
+    public String getName() {
+        return name;
+    }
 
-
-
-
-
-
+    public void setName(String name) {
+        this.name = name;
+    }
 }
-
-
